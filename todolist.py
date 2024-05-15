@@ -11,7 +11,7 @@ def addItem(item):
 #remove is used to remove an element from a list 
 #need try, except to check for errors
 
-def delete(item):
+def removeTodo(item):
     try:
         todo_list.remove(item)
         print(f'Removed: {item}, from your todo list')
@@ -28,7 +28,7 @@ def listTodos():
 def display_menu():
     print("\nTo-Do List Menu")
     print("1. Add item")
-    print("2. Mark item as completed")
+    print("2. Remove item")
     print("3. Show to-do list")
     print("4. Quit")
 
@@ -44,5 +44,23 @@ def main():
             print('Invalid input. Please enter a number between 1 and 4')
             continue
         if choice == 1:
-            item = input('Enter the item to add: ').
+            item = input('Enter the item to add: ').strip()
+            addItem(item)
+        elif choice == 2:
+            removedItem = input('Enter item you want to delete: ').strip()
+            removeTodo(removedItem)
+        elif choice == 3: 
+            listTodos()
+        elif choice == 4: 
+            print('Exiting to-do list application.')
+            break 
+        else: 
+            print('Invalid choice; Enter number between 1 and 4')
+
+#entry point for application, ensures main() is only executed when script is run directly
+
+if __name__ == "__main__":
+    main()
+
+
 
