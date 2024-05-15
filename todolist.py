@@ -64,3 +64,13 @@ if __name__ == "__main__":
 
 
 
+"""
+def mark_completed(index):
+    if 0 <= index < len(todo_list):
+        todo_list[index] = f"[Completed] {todo_list[index]}"
+        print(f'Marked item {index} as completed.')
+    else:
+        print('Invalid index.')
+might mark completion function and see how it works 
+
+"""
